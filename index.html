@@ -35,20 +35,19 @@
       integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
       crossorigin="anonymous"
     />
+    <style></style>
   </head>
   <body>
     <!--Navbar-->
-    <div class="fixed-top">
+    <div class="fixed-top shadow-sm">
       <nav class="navbar navbar-expand-lg">
         <div class="container px-5">
           <div class="d-flex align-items-center">
             <i class="fa-solid fa-section icons"></i>
-            <a class="navbar-brand fw-bold navbar-font" href="#"
-              >Start Bootstrap</a
-            >
+            <a class="navbar-brand fw-bold font" href="#">Start Bootstrap</a>
           </div>
           <button
-            class="navbar-toggler font-small p-2 px-3"
+            class="navbar-toggler p-2 px-3"
             type="button"
             data-bs-toggle="collapse"
             data-bs-target="#navbarSupportedContent"
@@ -61,32 +60,117 @@
           </button>
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-              <li><a class="nav-link" href="#">Home</a></li>
-              <li><a class="nav-link" href="#">Content</a></li>
-              <li><a class="nav-link" href="#">Contact</a></li>
+              <li><a class="nav-link mx-2" href="#">Features</a></li>
+              <li><a class="nav-link mx-2" href="#">Download</a></li>
+              <li>
+                <button
+                  class="btn btn-primary rounded-pill mb-2 mx-2"
+                  type="button"
+                  data-bs-toggle="modal"
+                  data-bs-target="#exampleModal"
+                >
+                  <i class="bi-chat-text-fill m-1"></i>
+                  Send Feedback
+                </button>
+              </li>
             </ul>
           </div>
         </div>
       </nav>
     </div>
+    <!-- Modal -->
+    <div
+      class="modal fade"
+      id="exampleModal"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header py-4">
+            <h1 class="modal-title fs-5 font" id="exampleModalLabel">
+              Send Feedback
+            </h1>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <form
+              action="https://formsubmit.co/hulyaayar48@gmail.com"
+              method="POST"
+            >
+              <div class="form-group">
+                <input
+                  type="name"
+                  class="form-control p-3 mt-2"
+                  id="exampleInputName"
+                  aria-describedby="nameHelp"
+                  placeholder="Full Name"
+                />
+              </div>
+              <div class="form-group">
+                <input
+                  type="email"
+                  class="form-control p-3 mt-3"
+                  id="exampleInputEmail1"
+                  aria-describedby="emailHelp"
+                  placeholder="Email address"
+                />
+              </div>
+              <div class="form-group">
+                <input
+                  type="tel"
+                  class="form-control p-3 mt-3"
+                  id="phone"
+                  name="phone"
+                  aria-describedby="phoneHelp"
+                  placeholder="Phone Number"
+                />
+              </div>
+              <div class="form-group">
+                <textarea
+                  class="form-control p-3 mt-3"
+                  id="exampleFormControlTextarea1"
+                  rows="4"
+                  placeholder="Message"
+                ></textarea>
+              </div>
+              <div class="d-grid">
+                <button
+                  class="btn btn-primary rounded-pill px-5 mt-3 p-2"
+                  type="submit"
+                >
+                  Submit
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
     <!--Header-->
     <section class="bg-light header">
       <div class="container py-5">
         <div class="row">
-          <div class="col-lg-4 d-flex justify-content-start text-center">
-            <div class="mt-5">
+          <div
+            class="col-lg-6 d-flex justify-content-start align-items-center mt-5"
+          >
+            <div class="mt-5 display-1">
               <div>
                 <h1>Showcase your app beautifully.</h1>
               </div>
-              <div class="mt-2 muted">
+              <div class="mt-4 muted mb-5">
                 <p>
                   Launch your mobile app landing page faster with this free,
                   open source theme from Start Bootstrap!
                 </p>
               </div>
-              <div
-                class="d-lg-flex justify-content-center column-gap-5 mt-5 m-5"
-              >
+              <div class="d-lg-flex text-center column-gap-5 app-store">
                 <a class="nav-link mb-4" href="#"
                   ><img src="./assets/images/google-play-badge.jpg" alt=""
                 /></a>
@@ -97,12 +181,13 @@
               </div>
             </div>
           </div>
-          <div class="col-lg-8 text-center mt-4">
+          <div class="offset-lg-2 col-lg-4 text-center mt-5 child-1">
             <img
-              class="img-fluid height"
+              class="img-fluid height mt-5"
               src="./assets/images/phone-screen.png"
               alt=""
             />
+            <div class="child-3"></div>
           </div>
         </div>
       </div>
@@ -172,24 +257,29 @@
               </div>
             </div>
           </div>
-          <div class="col-lg-4 col-xs-12 text-center order-lg-1">
+          <div
+            class="col-lg-4 d-lg-flex align-items-center col-xs-12 text-center order-lg-1 child-1"
+          >
             <img
               class="img-fluid height"
               src="./assets/images/phone-screen.png"
               alt=""
             />
+            <div class="child-2 child-2-new"></div>
           </div>
         </div>
       </div>
     </section>
     <!--Basic features-->
-    <section class="bg-light mt-5 pt-5 mb-5 pb-5">
+    <section class="bg-light mt-5 pt-5 pb-5">
       <div class="container">
-        <div class="row">
-          <div class="col-lg-4 d-flex justify-content-start text-center">
+        <div class="row m-5 mb-5">
+          <div class="col-lg-5 d-flex align-items-center justify-content-start">
             <div class="mt-5">
               <div>
-                <h2 class="fw-lighter fs-1">Enter a new age of web design</h2>
+                <h2 class="display-4 lh-1 mb-4">
+                  Enter a new age of web design
+                </h2>
               </div>
               <div class="mt-2 muted">
                 <p>
@@ -201,14 +291,14 @@
               </div>
             </div>
           </div>
-          <div class="col-lg-8 text-center mt-4">
-            <div class="col-lg-8 text-center mt-4">
-              <img
-                class="img-fluid rounded-circle"
-                src="./assets/images/photo.jpeg"
-                alt=""
-              />
-            </div>
+          <div
+            class="col-lg-7 mt-4 d-flex justify-content-center purple-picture"
+          >
+            <img
+              class="img-fluid rounded-circle"
+              src="./assets/images/photo.jpeg"
+              alt=""
+            />
           </div>
         </div>
       </div>
@@ -216,15 +306,20 @@
 
     <!--Call to action section-->
     <section class="cta">
-      <div class="container">
-        <div class="row">
-          <div class="col text-white">
-            <h2>Stop Waiting.</h2>
-
-            <h2>Start building</h2>
-            <a href="" class="btn btn-outline-light round-5 p-3 rounded-pill">
-              Download for free
-            </a>
+      <div class="card-overlay">
+        <div class="container">
+          <div class="row px-5">
+            <div class="col z-index-1">
+              <h2 class="fw-light display-1">
+                Stop Waiting. <br />Start building.
+              </h2>
+              <a
+                href=""
+                class="btn btn-outline-light round-5 p-3 mt-4 rounded-pill"
+              >
+                Download for free
+              </a>
+            </div>
           </div>
         </div>
       </div>
@@ -234,11 +329,11 @@
     <section>
       <div class="gradient">
         <div class="container pt-5 pb-5">
-          <div class="row justify-content-center text-center">
-            <div class="col-12 pt-3 pb-3">
+          <div class="row mb-3 mt-3 justify-content-center text-center">
+            <div class="col-12 pt-3 pb-3 font">
               <h2>Get the app now!</h2>
             </div>
-            <div class="d-lg-flex justify-content-center column-gap-5">
+            <div class="d-lg-flex justify-content-center column-gap-3">
               <a class="nav-link rounded" href="#"
                 ><img
                   class="rounded"
@@ -246,7 +341,7 @@
                   alt=""
               /></a>
 
-              <a class="nav-link pt-3" href="#"
+              <a class="nav-link mt-3 mt-lg-0" href="#"
                 ><img
                   class="rounded"
                   src="./assets/images/app-store-badge.jpg"
@@ -265,9 +360,9 @@
           <div class="col-12">
             <p>© Your Website 2023. All Rights Reserved.</p>
           </div>
-          <div class="col-12">
-            <a class="text-white-50" href="">Privacy &nbsp;·&nbsp;</a>
-            <a class="text-white-50" href=""> Terms&nbsp; ·&nbsp;</a>
+          <div class="col-12 pt-0">
+            <a class="text-white-50" href="">Privacy </a>&nbsp;·&nbsp;
+            <a class="text-white-50" href=""> Terms</a>&nbsp;·&nbsp;
             <a class="text-white-50" href="">FAQ</a>
           </div>
         </div>

@@ -1,3 +1,5 @@
+$color-gradient: linear-gradient(45deg, #2937f0, #9f1ae2);
+
 body {
   font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto;
 }
@@ -5,21 +7,19 @@ body {
 .fixed-top {
   background-color: #fff;
 }
-
 .fixed .font-small {
   font-size: smaller;
 }
-
 .fixed-top button {
   font-size: smaller;
 }
-
 .font {
-  font-family: "Kanit", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-family: "Kanit", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+    "Segoe UI Symbol", "Noto Color Emoji";
 }
-
 .modal-header {
-  background: linear-gradient(45deg, #2937f0, #9f1ae2);
+  background: $color-gradient;
   color: #fff;
 }
 
@@ -28,42 +28,33 @@ body {
   font-size: calc(1.625rem + 4.5vw);
   font-weight: 300;
 }
-
 .height {
   width: 240px;
 }
-
 .muted {
   font-size: 1.25rem;
   color: rgba(33, 37, 41, 0.75);
   font-weight: normal;
 }
-
 .gradient {
-  background: linear-gradient(45deg, #2937f0, #9f1ae2);
+  background: $color-gradient;
 }
-
 .gradient h2 {
   color: #fff;
   font-size: calc(1.375rem + 0.9vw) !important;
 }
-
 .gradient img {
   height: 48px;
 }
-
 .icons {
   font-size: 4rem;
   color: transparent;
-  -webkit-background-clip: text;
-          background-clip: text;
-  background-image: linear-gradient(45deg, #2937f0, #9f1ae2);
+  background-clip: text;
+  background-image: $color-gradient;
 }
-
 .child-1 img {
   width: 10rem;
 }
-
 .purple-picture img {
   height: 18rem;
 }
@@ -77,7 +68,6 @@ body {
   background-size: cover;
   color: #fff;
 }
-
 .card-overlay {
   position: absolute;
   top: 0;
@@ -87,30 +77,31 @@ body {
   background-color: black;
   opacity: 0.5;
 }
-
 .display-1 {
   font-size: calc(1.625rem + 4.5vw);
   margin-top: 250px;
   font-weight: 300;
   line-height: 1.2;
 }
-
 .cta {
   height: 700px;
 }
-
 .font h2 {
   font-size: calc(1.325rem + 0.9vw);
 }
-
 .footer a {
   text-decoration: none;
 }
-
 .footer a:hover {
   text-decoration: underline;
 }
-
+@mixin child {
+  position: absolute;
+  border-radius: 50%;
+  background-image: $color-gradient;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+}
 @media (min-width: 576px) {
   .child-1 {
     position: relative;
@@ -121,11 +112,7 @@ body {
   }
   .child-2,
   .child-3 {
-    position: absolute;
-    border-radius: 50%;
-    background-image: linear-gradient(45deg, #2937f0, #9f1ae2);
-    transform: translate(-50%, -50%);
-    z-index: -1;
+    @include child;
     height: 300px;
     width: 300px;
     top: 50%;
@@ -138,11 +125,7 @@ body {
   }
   .child-2,
   .child-3 {
-    position: absolute;
-    border-radius: 50%;
-    background-image: linear-gradient(45deg, #2937f0, #9f1ae2);
-    transform: translate(-50%, -50%);
-    z-index: -1;
+    @include child;
     height: 360px;
     width: 360px;
     top: 50%;
@@ -158,11 +141,7 @@ body {
     margin-left: 0px !important;
   }
   .child-2-new {
-    position: absolute;
-    border-radius: 50%;
-    background-image: linear-gradient(45deg, #2937f0, #9f1ae2);
-    transform: translate(-50%, -50%);
-    z-index: -1;
+    @include child;
     height: 250px;
     width: 250px;
     top: 45%;
@@ -173,11 +152,7 @@ body {
     margin-left: 100px;
   }
   .child-3 {
-    position: absolute;
-    border-radius: 50%;
-    background-image: linear-gradient(45deg, #2937f0, #9f1ae2);
-    transform: translate(-50%, -50%);
-    z-index: -1;
+    @include child;
     height: 360px;
     width: 360px;
     top: 50%;
@@ -195,4 +170,4 @@ body {
   .gradient h2 {
     font-size: 2.5rem !important;
   }
-}/*# sourceMappingURL=style.css.map */
+}
