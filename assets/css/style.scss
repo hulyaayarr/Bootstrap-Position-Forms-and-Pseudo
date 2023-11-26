@@ -1,5 +1,10 @@
-$color-gradient: linear-gradient(45deg, #2937f0, #9f1ae2);
-
+$color-gradient: linear-gradient(
+  90deg,
+  rgba(254, 239, 0, 1) 0%,
+  rgba(255, 0, 0, 0.8547794117647058) 38%,
+  rgba(255, 26, 26, 0.8575805322128851) 57%,
+  rgba(255, 171, 0, 1) 100%
+);
 body {
   font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto;
 }
@@ -12,6 +17,9 @@ body {
 }
 .fixed-top button {
   font-size: smaller;
+}
+.navbar-brand:hover {
+  color: #2937f0 !important;
 }
 .font {
   font-family: "Kanit", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
@@ -61,21 +69,25 @@ body {
 
 .cta {
   position: relative;
-  padding: 15rem 0;
-  background-image: url("/assets/images/back-ground.jpeg");
+  background-image: url("/assets/images/bg-cod-1.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   color: #fff;
 }
-.card-overlay {
+.cta::before {
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
+  right: 0;
   width: 100%;
   height: 100%;
-  background-color: black;
-  opacity: 0.5;
+  background: rgba(96, 10, 10, 0.338);
+}
+.cta .container {
+  z-index: 10;
+  position: relative;
 }
 .display-1 {
   font-size: calc(1.625rem + 4.5vw);
@@ -155,7 +167,7 @@ body {
     @include child;
     height: 360px;
     width: 360px;
-    top: 50%;
+    top: 40%;
     left: 55%;
   }
 }
