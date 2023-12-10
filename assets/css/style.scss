@@ -44,6 +44,35 @@ body {
   color: rgba(33, 37, 41, 0.75);
   font-weight: normal;
 }
+.wrapper {
+  position: relative;
+}
+.svg-circle {
+  fill: orange;
+  position: absolute;
+  display: none;
+}
+.svg-plus {
+  fill: orange;
+  position: absolute;
+  display: none;
+  transform: rotate(45deg);
+}
+.svg-plus svg path {
+  stroke: orange;
+  stroke-width: 3;
+}
+.svg-circle-2 {
+  @extend .svg-circle;
+}
+.svg-plus-2 {
+  @extend .svg-plus;
+}
+.svg-plus-2 svg path {
+  stroke: orange;
+  stroke-width: 3;
+}
+
 .gradient {
   background: $color-gradient;
 }
@@ -115,8 +144,30 @@ body {
   z-index: -1;
 }
 @media (min-width: 576px) {
+  .svg-circle {
+    display: block;
+    left: 70%;
+    top: 10%;
+  }
+  .svg-plus {
+    display: block;
+    top: 90%;
+    left: 15%;
+  }
+  .svg-plus-2 {
+    display: block;
+    left: 80%;
+    top: 10%;
+  }
+  .svg-circle-2 {
+    display: block;
+    top: 90%;
+    left: 10%;
+  }
+
   .child-1 {
     position: relative;
+
     z-index: 1;
   }
   .child-1 img {
@@ -145,6 +196,22 @@ body {
   }
 }
 @media (min-width: 992px) {
+  .svg-circle {
+    left: 85%;
+    top: 10%;
+  }
+  .svg-plus {
+    top: 85%;
+    left: 10%;
+  }
+  .svg-plus-2 {
+    left: 110%;
+    top: 10%;
+  }
+  .svg-circle-2 {
+    top: 75%;
+    left: -10%;
+  }
   .child-1 img {
     margin-left: 50px;
   }
@@ -167,7 +234,7 @@ body {
     @include child;
     height: 360px;
     width: 360px;
-    top: 40%;
+    top: 50%;
     left: 55%;
   }
 }

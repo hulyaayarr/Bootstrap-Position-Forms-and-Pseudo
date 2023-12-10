@@ -43,6 +43,33 @@ body {
   font-weight: normal;
 }
 
+.wrapper {
+  position: relative;
+}
+
+.svg-circle, .svg-circle-2 {
+  fill: orange;
+  position: absolute;
+  display: none;
+}
+
+.svg-plus, .svg-plus-2 {
+  fill: orange;
+  position: absolute;
+  display: none;
+  transform: rotate(45deg);
+}
+
+.svg-plus svg path, .svg-plus-2 svg path {
+  stroke: orange;
+  stroke-width: 3;
+}
+
+.svg-plus-2 svg path {
+  stroke: orange;
+  stroke-width: 3;
+}
+
 .gradient {
   background: linear-gradient(90deg, rgb(254, 239, 0) 0%, rgba(255, 0, 0, 0.8547794118) 38%, rgba(255, 26, 26, 0.8575805322) 57%, rgb(255, 171, 0) 100%);
 }
@@ -121,6 +148,26 @@ body {
 }
 
 @media (min-width: 576px) {
+  .svg-circle, .svg-circle-2 {
+    display: block;
+    left: 70%;
+    top: 10%;
+  }
+  .svg-plus, .svg-plus-2 {
+    display: block;
+    top: 90%;
+    left: 15%;
+  }
+  .svg-plus-2 {
+    display: block;
+    left: 80%;
+    top: 10%;
+  }
+  .svg-circle-2 {
+    display: block;
+    top: 90%;
+    left: 10%;
+  }
   .child-1 {
     position: relative;
     z-index: 1;
@@ -159,6 +206,22 @@ body {
   }
 }
 @media (min-width: 992px) {
+  .svg-circle, .svg-circle-2 {
+    left: 85%;
+    top: 10%;
+  }
+  .svg-plus, .svg-plus-2 {
+    top: 85%;
+    left: 10%;
+  }
+  .svg-plus-2 {
+    left: 110%;
+    top: 10%;
+  }
+  .svg-circle-2 {
+    top: 75%;
+    left: -10%;
+  }
   .child-1 img {
     margin-left: 50px;
   }
@@ -189,7 +252,7 @@ body {
     z-index: -1;
     height: 360px;
     width: 360px;
-    top: 40%;
+    top: 50%;
     left: 55%;
   }
 }
